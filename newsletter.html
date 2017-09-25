@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='shortcut icon' type='image/x-icon' href='images/favicon.ico' />
+    <meta charset="utf-8">
+    <title>Bent Creek Ceramics</title>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700|Roboto:300,300i,400,400i" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img id="logo"  src="./images/bent-creek-logo.png" />
+        <ul class="nav-buttons">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./newsletter.html">Newsletter</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="newsletter-main">
+      <div class="signup-box">
+        <div class="signup-banner">
+          <h2>Sign Up for Our Weekly Newsletter<h2>
+          <p>Stay up to date with events, activities, news and specials.</p>
+        </div>
+        <div class="signup-form">
+          <input id="nameInput" class="text-input" type="text" name="nameInput" value="Name">
+          <input id="emailInput" class="text-input" type="email" name="emailInput" value="Email">
+          <input id="signupButton" class="button" type="submit" value="Submit">
+        </div>
+      </div>
+    </main>
+    <script type="text/javascript">
+    var nameInput = document.getElementById('nameInput');
+    var emailInput = document.getElementById('emailInput');
+    var signupButton = document.getElementById('signupButton');
+    signupButton.addEventListener('click', function(e) {
+      var nameVal = nameInput.value;
+      var emailVal = emailInput.value;
+      if (nameVal && emailVal) {
+        alert('Thanks for signing up, ' + nameVal + '. Newsletters will be sent to ' + emailVal);
+        nameInput.value = "";
+        emailInput.value = "";
+      } else {
+        alert('We would love for you to sign up, please provide both your name and email address.');
+      }
+    });
+  </script>
+  </body>
+</html>
